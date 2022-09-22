@@ -13,6 +13,6 @@ const Mail = require('./routes/mail')
 
 app.use("/api", Mail)
 
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
     console.log(`Server Running at 8000`);
 })
