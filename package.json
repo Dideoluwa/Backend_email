@@ -23,8 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-prebuild": "npm install && cd client && npm install && cd ../ && npm install",
-    "heroku-postbuild": "cd client && npm run build",
+    "heroku-prebuild": "npm install",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
