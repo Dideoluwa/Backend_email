@@ -17,9 +17,9 @@ exports.sendMail = (req, res) => {
     })
 
     let message = {
-        from: process.env.EMAIL,
+        from: 'Darasimi Oni <darasimidideoluwa@gmail.com>',
         to: userMail,
-        subject: `We just scheduled a demo for you, ${name}.`,
+        subject: `New Event: ${name} - ${timer} ${dates}.`,
         html: `<b>Hi ${name}, <br>A new event has been scheduled.<br>Event date/Time: <br>${dates}/${timer}<br>Invitee:<br><a>${userMail}<a/>.</b >`
     }
 
