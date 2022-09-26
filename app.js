@@ -8,7 +8,6 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
 
-
 const Mail = require('./routes/mail')
 
 app.use("/api", Mail)
