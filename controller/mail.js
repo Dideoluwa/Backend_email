@@ -17,8 +17,8 @@ exports.sendMail = (req, res) => {
     let transporter = nodeMailer.createTransport({
         service: "Gmail",
         auth: {
-            user: process.env.EMAIL,
-            pass: process.env.PASSWORD
+            user: 'darasimidideoluwa@gmail.com',
+            pass: 'tocsxttxooendrxh'
         }
     })
 
