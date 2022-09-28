@@ -17,8 +17,8 @@ exports.sendMail = (req, res) => {
     let transporter = nodeMailer.createTransport({
         service: "Gmail",
         auth: {
-            user: 'darasimidideoluwa@gmail.com',
-            pass: 'tocsxttxooendrxh'
+            user: process.env.EMAIL,
+            pass: process.env.PASSWORD
         }
     })
 
@@ -27,7 +27,7 @@ exports.sendMail = (req, res) => {
         from: 'Darasimi Oni <darasimidideoluwa@gmail.com>',
         to: userMail,
         subject: `New Event: ${name} - ${timer} ${dates}.`,
-        html: `<b>Hi ${name}, <br>A new event has been scheduled.<br>Event date/Time: <br>${dates}/${timer}<br>Purpose of meeting : ${purpose}<br>Invitee:<br><a href=mailto:${signUpMail}>${signUpMail}<a/>.</b >`,
+        html: `<b>Hi ${name}, <br>A new event has been scheduled.<br>Event date/Time: <br>${dates}/${timer}<br>Purpose of meeting : ${purpose}<br>Invitee:<br><a href=mailto:${signUpMail}>${signUpMail}<a/>.`
         // icalEvent: {
         //     filename: "invitation.ics",
         //     method: 'request',
